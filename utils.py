@@ -3,29 +3,6 @@ import asyncio
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-def start_buttons():
-    return InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "Source",
-                    url="https://github.com/suphiozturk8"
-                ),
-                InlineKeyboardButton(
-                    "Project Channel",
-                    url="https://t.me/BioCasper"
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    "Author",
-                    url="https://t.me/Syupie"
-                ),
-            ],
-        ]
-    )
-
-
 async def __reply(message, bot_username, copied):
     msg_id = copied.id
     if copied.video:
