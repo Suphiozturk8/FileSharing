@@ -1,10 +1,10 @@
 
 from pyrogram import Client, filters
-from pyrogram.types import  Message
+from pyrogram.types import Message
 
 from config import APP_ID, API_HASH, BOT_TOKEN, TRACK_CHANNEL, OWNER_ID, START_MESSAGE, HELP_MESSAGE
 
-from utils import __reply, start_buttons
+from utils import __reply
 
 bot = Client("FileSharing", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
@@ -27,7 +27,6 @@ async def _startfile(bot, message: Message):
     if message.text == "/start":
         return await message.reply_text(
             START_MESSAGE.format(message.from_user.first_name),
-            reply_markup=start_buttons(),
             quote=True
         )
 
